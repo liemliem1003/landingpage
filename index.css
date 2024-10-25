@@ -81,17 +81,50 @@ input[type="radio"]:checked + .label-text {
 
 .category .item-list img{
     margin: auto;
+    width: 12%;
 }
 
 .download{
     position: relative;
 }
 
+.download .download-banner{
+    width: 100%;
+}
+
+
 .download .download-button{
     position: absolute;
-    right: 197px;
-    bottom: 150px;
+    right: 107px;
+    bottom: 115px;
 }
+
+@media (max-width: 768px) {
+    *{
+        font-size: 16px!important;
+    }
+    .download .download-button {
+        right: -263px; /* Adjust this value as needed */
+        bottom: 27px; /* Adjust this value as needed */
+    }
+    .download-button img{
+        width: 15%;
+    }
+    .hot-deal .navigation{
+        display: block;
+    }
+    .hot-deal .navigation .radio-container{
+        margin-top: 20px;
+    }
+    .hot-deal .navigation .radio-container .label-text{
+        padding: 5px 10px;
+        margin:0;
+    }
+    .summary .value, .summary .text{
+        font-size: 12px!important;
+    }
+}
+
 .summary{
     display: flex;
     border-radius: 12px;
@@ -101,6 +134,7 @@ input[type="radio"]:checked + .label-text {
     text-align: center;
     color: aliceblue;
 }
+
 .summary .item{
     margin: auto;
     /* color: #FC8A06; */
