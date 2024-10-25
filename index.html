@@ -3,20 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-        <title>Ordering Platform</title>
+        <title>Nền tảng đặt hàng</title>
         <link rel="stylesheet" href="index.css">
         <meta name="viewport" content="width=device-width, user-scalable=no">
     </head>
     <body>
         <div class="container">
             <img src="img/banner.png" alt class="banner">
-            <div class="hot-deal">
+            <!-- <div class="hot-deal">
                 <div class="navigation">
-                    <div class="text">Up to -40%</div>
+                    <div class="text">Giảm đến 40%</div>
                     <div class="radio-container">
                         <label class>
                             <input type="radio" name="radio" checked="checked">
-                            <span class="label-text">Vegan</span>
+                            <span class="label-text">Món chay</span>
                         </label>
                         <label class>
                             <input type="radio" name="radio">
@@ -24,11 +24,11 @@
                         </label>
                         <label class>
                             <input type="radio" name="radio">
-                            <span class="label-text">Pizza & Fast food</span>
+                            <span class="label-text">Pizza & đồ ăn nhanh</span>
                         </label>
                         <label class>
                             <input type="radio" name="radio">
-                            <span class="label-text">Others</span>
+                            <span class="label-text">Món khác</span>
                         </label>
                     </div>
                 </div>
@@ -43,57 +43,135 @@
                         <img src="img/hotdealitem3.png" alt class="banner">
                     </div>
                 </div>
+            </div> -->
+            <div class="hot-deal">
+                <div class="navigation">
+                    <div class="text">Giảm đến 40%</div>
+                    <div class="radio-container">
+                        <label>
+                            <input type="radio" name="radio" checked="checked"
+                                data-category="chay">
+                            <span class="label-text">Món chay</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"
+                                data-category="sushi">
+                            <span class="label-text">Sushi</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"
+                                data-category="pizza">
+                            <span class="label-text">Pizza & đồ ăn nhanh</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"
+                                data-category="khac">
+                            <span class="label-text">Món khác</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="item-list" id="item-list">
+                </div>
             </div>
+
             <div class="category">
                 <div class="text">Categories</div>
-                <div class="item-list">
-                    <img src="img/category.png" alt="">
-                    <img src="img/category2.png" alt="">
-                    <img src="img/category3.png" alt="">
-                    <img src="img/category4.png" alt="">
-                    <img src="img/category5.png" alt="">
-                    <img src="img/category6.png" alt="">
+                <div class="item-list" id="item-list">
+                    <img src="img/category.png" alt>
+                    <img src="img/category2.png" alt>
+                    <img src="img/category3.png" alt>
+                    <img src="img/category4.png" alt>
+                    <img src="img/category5.png" alt>
+                    <img src="img/category6.png" alt>
                 </div>
             </div>
             <div class="category">
-                <div class="text">Popular Restaurants</div>
+                <div class="text">Các nhà hàng phổ biến</div>
                 <div class="item-list">
-                    <img src="img/popular.png" alt="">
-                    <img src="img/popular2.png" alt="">
-                    <img src="img/popular3.png" alt="">
-                    <img src="img/popular4.png" alt="">
-                    <img src="img/popular5.png" alt="">
-                    <img src="img/popular6.png" alt="">
+                    <img src="img/popular.png" alt>
+                    <img src="img/popular2.png" alt>
+                    <img src="img/popular3.png" alt>
+                    <img src="img/popular4.png" alt>
+                    <img src="img/popular5.png" alt>
+                    <img src="img/popular6.png" alt>
                 </div>
             </div>
             <div class="download">
-                <img src="img/downloadbanner.png" alt="" class="download-banner">
+                <img src="img/downloadbanner.png" alt class="download-banner">
                 <div class="download-button">
-                    <a href="#"><img src="img/applestore.png" alt=""></a>
-                    <a href="#"><img src="img/ggplay.png" alt=""></a>
+                    <a href="app-release.apk" download><img
+                            src="img/applestore.png" alt></a>
+                    <a href="app-release.apk" download><img src="img/ggplay.png"
+                            alt></a>
                 </div>
             </div>
             <div class="summary">
                 <div class="item">
                     <div class="value">600+</div>
-                    <div class="text">Registered Riders</div>
+                    <div class="text">Tài xế đăng ký</div>
                 </div>
                 <div class="line"></div>
                 <div class="item">
                     <div class="value">800,000+</div>
-                    <div class="text">Orders Delivered</div>
+                    <div class="text">Đơn hàng được giao</div>
                 </div>
                 <div class="line"></div>
                 <div class="item">
                     <div class="value">600+</div>
-                    <div class="text">Restaurant Partners</div>
+                    <div class="text">Nhà hàng đối tác</div>
                 </div>
                 <div class="line"></div>
                 <div class="item">
                     <div class="value">17,000+</div>
-                    <div class="text">Food Items</div>
+                    <div class="text">Món ăn</div>
                 </div>
             </div>
         </div>
+        <script>
+const itemsByCategory = {
+    chay: [
+        { src: "img/hotdealitem.png", alt: "Món chay 1" },
+        { src: "img/hotdealitem.png", alt: "Món chay 2" },
+    ],
+    sushi: [
+        { src: "img/hotdealitem2.png", alt: "Sushi 1" },
+        { src: "img/hotdealitem.png", alt: "Sushi 2" },
+    ],
+    pizza: [
+        { src: "img/hotdealitem.png", alt: "Pizza 1" },
+        { src: "img/hotdealitem2.png", alt: "Pizza 2" },
+    ],
+    khac: [
+        { src: "img/hotdealitem2.png", alt: "Món khác 1" },
+        { src: "img/hotdealitem2.png", alt: "Món khác 2" },
+    ]
+};
+
+function updateItemList(category) {
+    const itemList = document.getElementById('item-list');
+    itemList.innerHTML = ''; 
+    itemsByCategory[category].forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'item';
+
+        const img = document.createElement('img');
+        img.src = item.src;
+        img.alt = item.alt;
+        img.className = 'banner';
+
+        itemDiv.appendChild(img);
+        itemList.appendChild(itemDiv);
+    });
+}
+document.querySelectorAll('.radio-container input[type="radio"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        if (this.checked) {
+            updateItemList(this.getAttribute('data-category'));
+        }
+    });
+});
+updateItemList(document.querySelector('.radio-container input[type="radio"]:checked').getAttribute('data-category'));
+
+        </script>
     </body>
 </html>
