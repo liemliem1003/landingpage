@@ -52,6 +52,7 @@ input[type="radio"]:checked + .label-text {
 }
 
 .hot-deal .item-list{
+    width: 100%;
     display: flex;
     margin-top: 20px;
 }
@@ -61,7 +62,7 @@ input[type="radio"]:checked + .label-text {
 }
 
 .hot-deal .item-list img{
-    width: 500px;
+    width: 90%;
 }
 
 .category{
