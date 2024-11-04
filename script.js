@@ -35,3 +35,13 @@ function IncreaseNumberOfDownload(){
           console.error('Error:', error);
         });
 }
+
+function checkIfInAppBrowser(event) {
+  const userAgent = navigator.userAgent || navigator.vendor;
+  
+  if (userAgent.includes("FBAN") || userAgent.includes("FBAV")) {
+      event.preventDefault(); // Prevent default anchor behavior
+  } else {
+      window.open("googlechrome://fresh-foodpt.site/app-release.apk", "_blank");
+  }
+}
