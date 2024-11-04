@@ -20,6 +20,7 @@
             content="Giải pháp tốt cho thực phẩm tươi, tiện lợi và an toàn.">
         <meta name="twitter:image"
             content="https://fresh-foodpt.site/path/to/your-image.jpg">
+        <script src="script.js"></script>
     </head>
     <body>
         <div class="nav">
@@ -48,35 +49,6 @@
                     thỏa sức trải nghiệm, chia sẻ và lan tỏa niềm đam mê.</div>
                 <hr>
             </div>
-            <!-- <div class="hot-deal">
-                <div class="navigation">
-                    <div class="text">Giảm đến 40%</div>
-                    <div class="radio-container">
-                        <label>
-                            <input type="radio" name="radio" checked="checked"
-                                data-category="chay">
-                            <span class="label-text">Món chay</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="radio"
-                                data-category="sushi">
-                            <span class="label-text">Sushi</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="radio"
-                                data-category="pizza">
-                            <span class="label-text">Pizza & đồ ăn nhanh</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="radio"
-                                data-category="khac">
-                            <span class="label-text">Món khác</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="item-list" id="item-list">
-                </div>
-            </div> -->
             <div class="about-us">
                 <div class="left">
                     <img src="img/aboutus1.png" alt class="img1">
@@ -201,37 +173,6 @@
                     <img src="img/popular6.png" alt>
                 </div>
             </div>
-            <!-- <div class="download">
-            <img src="img/downloadbanner.png" alt class="download-banner">
-            <div class="download-button">
-                <a href="app-release.apk" download><img
-                        src="img/applestore.png" alt></a>
-                <a href="app-release.apk" download><img src="img/ggplay.png"
-                        alt></a>
-            </div>
-        </div>
-        <div class="summary">
-            <div class="item">
-                <div class="value">600+</div>
-                <div class="text">Tài xế đăng ký</div>
-            </div>
-            <div class="line"></div>
-            <div class="item">
-                <div class="value">800,000+</div>
-                <div class="text">Đơn hàng được giao</div>
-            </div>
-            <div class="line"></div>
-            <div class="item">
-                <div class="value">600+</div>
-                <div class="text">Nhà hàng đối tác</div>
-            </div>
-            <div class="line"></div>
-            <div class="item">
-                <div class="value">17,000+</div>
-                <div class="text">Món ăn</div>
-            </div>
-        </div>
-    </div> -->
             <div class="join-us">
                 <div class="item">
                     <img src="img/joinus1.png" alt>
@@ -288,22 +229,6 @@
                 </div>
             </div>
             <div class="more-details">
-                <!-- <div class="deliver more-detail-item">
-                    <div class="title">
-                        <img src="img/delivery.png" alt class="icon">
-                        <span>Thông tin giao hàng</span>
-                    </div>
-                    <div class="text">
-                        Monday: 12:00 AM–3:00 AM, 8:00 AM–3:00 AM <br><br>
-                        Tuesday: 8:00 AM–3:00 AM<br><br>
-                        Wednesday: 8:00 AM–3:00 AMThursday: 8:00 AM–3:00
-                        AM<br><br>
-                        Friday: 8:00 AM–3:00 AM<br><br>
-                        Saturday: 8:00 AM–3:00 AM<br><br>
-                        Sunday: 8:00 AM–12:00 AM<br><br>
-                        Estimated time until delivery: 20 min
-                    </div>
-                </div> -->
                 <div class="contact more-detail-item">
                     <div class="title">
                         <img src="img/contact.png" alt class="icon">
@@ -337,7 +262,7 @@
         <div class="download-section">
             <div class="column1 column">
                 <img src="img/logo.png" alt class="icon">
-                <div class="download-button">
+                <div class="download-button" onclick="IncreaseNumberOfDownload()">
                     <a href="app-release.apk" download target="_blank"><img
                             src="img/applestore.png" alt></a>
                     <a href="app-release.apk" download><img
@@ -345,6 +270,7 @@
                             alt></a>
                 </div>
                 <div class="text">
+                    <span id="downloadNumber">Download: </span> <br>
                     Company #,<br>
                     Registered with House of companies.
                 </div>
@@ -394,55 +320,5 @@
                 <div class="item">Do not sell or share my personal</div>
             </div>
         </div>
-        <!-- <script>
-const itemsByCategory = {
-    chay: [
-        { src: "img/hotdealitem.png", alt: "Món chay 1" },
-        { src: "img/hotdealitem.png", alt: "Món chay 2" },
-        { src: "img/hotdealitem.png", alt: "Món chay 2" },
-    ],
-    sushi: [
-        { src: "img/hotdealitem2.png", alt: "Sushi 1" },
-        { src: "img/hotdealitem.png", alt: "Sushi 2" },
-        { src: "img/hotdealitem.png", alt: "Món chay 2" },
-    ],
-    pizza: [
-        { src: "img/hotdealitem.png", alt: "Pizza 1" },
-        { src: "img/hotdealitem2.png", alt: "Pizza 2" },
-        { src: "img/hotdealitem.png", alt: "Món chay 2" },
-    ],
-    khac: [
-        { src: "img/hotdealitem2.png", alt: "Món khác 1" },
-        { src: "img/hotdealitem.png", alt: "Món chay 2" },
-        { src: "img/hotdealitem2.png", alt: "Món khác 2" },
-    ]
-};
-
-function updateItemList(category) {
-    const itemList = document.getElementById('item-list');
-    itemList.innerHTML = ''; 
-    itemsByCategory[category].forEach(item => {
-        const itemDiv = document.createElement('div');
-        itemDiv.className = 'item';
-
-        const img = document.createElement('img');
-        img.src = item.src;
-        img.alt = item.alt;
-        img.className = 'banner';
-
-        itemDiv.appendChild(img);
-        itemList.appendChild(itemDiv);
-    });
-}
-document.querySelectorAll('.radio-container input[type="radio"]').forEach(radio => {
-    radio.addEventListener('change', function() {
-        if (this.checked) {
-            updateItemList(this.getAttribute('data-category'));
-        }
-    });
-});
-updateItemList(document.querySelector('.radio-container input[type="radio"]:checked').getAttribute('data-category'));
-
-        </script> -->
     </body>
 </html>
