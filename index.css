@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    /* width: 80%; */
+    width: 80%;
     margin: auto;
 }
 
@@ -572,7 +572,7 @@ input[type="radio"]:checked+.label-text {
 @media (max-width: 768px) {
     .container {
         width: 100%;
-        max-width: 100%;
+        text-align: center;
     }
 
     .banner-container {
@@ -811,6 +811,7 @@ input[type="radio"]:checked+.label-text {
 
     .banner2-container .banner2-flex .banner2-flex-item1 .text1 {
         font-size: 16px !important;
+        width: auto!important;
     }
 
     .banner2-container .banner2-flex .banner2-flex-item1 .text2 {
@@ -825,8 +826,19 @@ input[type="radio"]:checked+.label-text {
         width: 330px;
         margin-left: 10px;
     }
-    .nav .nav-container{
-        display: none!important;
+
+    .banner2-2 {
+        width: 90%;
+        position: absolute;
+        height: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #191E32;
+    }
+
+    .nav .nav-container {
+        display: none !important;
     }
 }
 
@@ -842,7 +854,7 @@ input[type="radio"]:checked+.label-text {
     transform: translate(-50%, -50%);
 }
 
-.banner2-container .banner2{
+.banner2-container .banner2 {
     width: 100%;
     height: 100%;
 }
@@ -867,33 +879,33 @@ input[type="radio"]:checked+.label-text {
     margin-left: 10px;
 }
 
-.nav{
+.nav {
     display: flex;
     color: black;
     background-color: #FC8A06;
 }
 
-.nav .nav-container{
+.nav .nav-container {
     display: flex;
     margin-left: auto;
     align-items: center;
     justify-content: center;
 }
 
-.nav .nav-container .nav-item{
+.nav .nav-container .nav-item {
     margin: 0 20px;
     padding: 10px;
     font-size: 24px;
 }
 
-.nav .nav-container .nav-item:hover{
+.nav .nav-container .nav-item:hover {
     color: white;
     background-color: #03081F;
     transition: 0.3s;
     cursor: pointer;
 }
 
-.nav img{
+.nav img {
     width: 130px;
     margin-left: 30px;
 }
