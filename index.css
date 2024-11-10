@@ -572,6 +572,7 @@ input[type="radio"]:checked+.label-text {
 @media (max-width: 768px) {
     .container {
         width: 100%;
+        max-width: 100%;
     }
 
     .banner-container {
